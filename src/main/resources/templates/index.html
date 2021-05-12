@@ -169,7 +169,7 @@
 
 							<div class="single-product" th:each="product : ${products}">
 								<div class="product-f-image">
-									<img th:src="${product.productImageUrl}" alt="">
+									<img th:src="${product.productImgUrl}" alt="">
 									<div class="product-hover">
 										<!-- 											<a href="cart.html"  -->
 										<a th:href="${'/addToCart/productId=' + product.productId}"
@@ -184,7 +184,7 @@
 								</h2>
 								<div class="product-carousel-price">
 									<ins th:text="'$' + ${product.productPrice}">...</ins>
-									<del th:text="'$' + ${product.productOldPrice}">...</del>
+									<del th:text="'$' + ${product.productPrice}">...</del>
 									<!-- 										th:text="'$' + ${#numbers.formatDecimal(product.productPrice, 0, 'COMMA', 2, 'POINT')}">...</span> -->
 									<!-- 									<span -->
 									<!-- 										th:text="${#numbers.formatDecimal(product.productOldPrice, 0, 'COMMA', 2, 'POINT')}">...</span> -->

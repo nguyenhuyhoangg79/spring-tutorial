@@ -1,14 +1,31 @@
 package dev.keter.model.entity;
 
 import lombok.Data;
-import lombok.AllArgsConstructor;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Column;
+
+@Entity
 @Data
-@AllArgsConstructor
+@Table(name ="product")
 public class Product {
-    private String productId;
+
+    @Id
+    @GeneratedValue
+    @Column(name="product_id", nullable = false)
+    private long productId;
+
+    @Column(name = "product_name")
     private String productName;
-    private String productImageUrl;
-    private Double productOldPrice;
-    private Double productPrice;
+
+    @Column(name = "product_img_url")
+    private String productImgUrl;
+
+    @Column(name = "product_price")
+    private long productPrice;
+
+
 }
